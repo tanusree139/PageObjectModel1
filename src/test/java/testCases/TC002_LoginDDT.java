@@ -40,7 +40,7 @@ public class TC002_LoginDDT extends BaseClass {
 			
 		}
 		
-		System.out.println("getTitle ======= "+driver.getTitle());
+		System.out.println("getTitle is == "+driver.getTitle());
 		
 		Assert.assertEquals(driver.getTitle(), "My Account");  // https://tutorialsninja.com/demo/
 		
