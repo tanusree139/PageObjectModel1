@@ -13,6 +13,33 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <build>
+    <!-- To define the plugin version in your parent POM -->
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.13.0</version>
+        </plugin>
+		
+		<plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.5.2</version>
+        
+		<configuration>
+			<suiteXmlFiles>
+				<suiteXmlFile>testng.xml</suiteXmlFile>
+			</suiteXmlFiles>
+		</configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+   </build>
+  
+  
 
   <dependencies>
     <dependency>
@@ -109,6 +136,12 @@
     <scope>test</scope>
 </dependency>
 
+<dependency>
+  <groupId>org.projectlombok</groupId>
+  <artifactId>lombok</artifactId>
+  <version>1.18.28</version>
+</dependency>
+
 
 <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
 <dependency>
@@ -117,11 +150,7 @@
   <version>1.4.5</version>
 </dependency>
 
-  	<dependency>
-  		<groupId>PracticeSelenium</groupId>
-  		<artifactId>PracticeSelenium</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
+  	
 
     
   </dependencies>
